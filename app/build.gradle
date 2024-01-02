@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace 'com.flo'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.flo"
-        minSdk 31
+        minSdk 26
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -29,6 +29,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
     }
 }
 
