@@ -12,4 +12,6 @@
 
     <color name="ect1">#689AF1</color>
     <color name="ect2">#87D5C2</color>
+
+    <color name="select_color">#3f3fff</color>
 </resources>
