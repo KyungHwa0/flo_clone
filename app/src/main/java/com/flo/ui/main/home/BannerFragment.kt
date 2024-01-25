@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.flo.databinding.FragmentBannerBinding
-import com.flo.databinding.FragmentHomeBinding
 
 class BannerFragment(val imgRes : Int) : Fragment() {
     private lateinit var binding : FragmentBannerBinding
