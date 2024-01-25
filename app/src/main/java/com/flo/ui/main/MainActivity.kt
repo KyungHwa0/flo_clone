@@ -1,5 +1,6 @@
 package com.flo.ui.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.flo.R
@@ -8,6 +9,7 @@ import com.flo.ui.main.home.HomeFragment
 import com.flo.ui.main.locker.LockerFragment
 import com.flo.ui.main.look.LookFragment
 import com.flo.ui.main.search.SearchFragment
+import com.flo.ui.song.SongActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +21,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initBottomNavigation()
+
+        binding.mainPlayerLayout.setOnClickListener {
+            startActivity(Intent(this, SongActivity::class.java))
+        }
     }
 
     private fun initBottomNavigation() {
