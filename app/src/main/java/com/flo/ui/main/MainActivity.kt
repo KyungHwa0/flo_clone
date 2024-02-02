@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.flo.R
+import com.flo.data.Song
 import com.flo.databinding.ActivityMainBinding
 import com.flo.ui.main.home.HomeFragment
 import com.flo.ui.main.locker.LockerFragment
@@ -22,8 +23,18 @@ class MainActivity : AppCompatActivity() {
 
         initBottomNavigation()
 
+        val song = Song(binding.mainMiniplayerTitleTv.text.toString(), binding.mainMiniplayerSingerTv.text.toString(), 0, 60, false, "star_sandy_beach")
+
         binding.mainPlayerLayout.setOnClickListener {
-            startActivity(Intent(this, SongActivity::class.java))
+//            startActivity(Intent(this, SongActivity::class.java))
+            val intent = Intent(this, SongActivity::class.java)
+            intent.putExtra("title", song.title)
+            intent.putExtra("singer", song.singer)
+            intent.putExtra("second", song.second)
+            intent.putExtra("playTime", song.playTime)
+            intent.putExtra("isPlaying", song.isPlaying)
+            intent.putExtra("music", song.music)
+            startActivity(intent)
         }
     }
 
